@@ -1,0 +1,120 @@
+{
+  "generated_at_utc": "2026-10-04T15:21:21.712832+00:00",
+  "mode": "yahoo",
+  "data": {
+    "source": "yahoo",
+    "field": "Adj Close",
+    "tickers": [
+      "AGG",
+      "GLD",
+      "IEF",
+      "SPY",
+      "TIP",
+      "VEA",
+      "VNQ",
+      "VWO"
+    ],
+    "start": "2015-01-01",
+    "end_exclusive": "2026-01-01",
+    "synthetic": false,
+    "retrieved_at_utc": "2026-10-04T15:21:21.067094+00:00",
+    "cache_hit": false,
+    "adjustment": "Yahoo adjusted close; no added dividends",
+    "sha256": "e5388d46f930858e68aa65d6557458f0bf78a431bfe918dfc78c3cc85e759f5e"
+  },
+  "data_quality": {
+    "rows": 2766,
+    "return_observations": 2765,
+    "assets": 8,
+    "first_date": "2015-01-02",
+    "last_date": "2025-12-31",
+    "trimmed_rows": 0,
+    "interior_missing_cells": 0,
+    "largest_calendar_gap_days": 4,
+    "warnings": [],
+    "calendar_policy": "Observed common sessions; no exchange-calendar reconstruction."
+  },
+  "risk_free": {
+    "source": "fixed assumption",
+    "annual_effective_rate": 0.02
+  },
+  "fred_download": null,
+  "assumptions": {
+    "base_currency": "USD",
+    "long_only": true,
+    "fractional_total_return_units": true,
+    "start": "Already invested at first close; entry and liquidation fees excluded.",
+    "rebalance": "First observed session of the new period, after its return.",
+    "costs": "Basis points on gross bought plus sold notional, funded from NAV.",
+    "cash_flows": "None; no leverage, borrowing, tax, or standalone cash sleeve.",
+    "benchmark": "Configured benchmark weights, monthly close rebalancing, same cost rate.",
+    "covariance": "Full-sample ex-post estimate for descriptive risk attribution."
+  },
+  "configuration": {
+    "start": "2015-01-01",
+    "end": "2026-01-01",
+    "weights": {
+      "SPY": 0.3,
+      "VEA": 0.15,
+      "VWO": 0.05,
+      "AGG": 0.2,
+      "IEF": 0.1,
+      "TIP": 0.05,
+      "GLD": 0.1,
+      "VNQ": 0.05
+    },
+    "benchmark_weights": {
+      "SPY": 0.6,
+      "AGG": 0.4
+    },
+    "initial_capital": 100000.0,
+    "rebalance": "monthly",
+    "cost_bps": 5.0,
+    "annualization": 252,
+    "rolling_window": 126,
+    "min_observations": 60,
+    "fixed_rf_annual": 0.02,
+    "confidence": 0.95,
+    "seed": 42
+  },
+  "environment": {
+    "python": "3.13.15",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.0",
+    "yfinance": "0.2.66"
+  },
+  "file_hashes": {
+    "cleaned_prices.csv": "e5388d46f930858e68aa65d6557458f0bf78a431bfe918dfc78c3cc85e759f5e",
+    "metrics.csv": "860c42a87cd3b627c3c633cb6dbfc9f368d68bbbc0372efb785af16361165dfc",
+    "risk_free_returns.csv": "9190f276e59819723a9644b696b7049403f46741d4b42573d1b6b59208648611",
+    "risk_contributions.csv": "ac731338afb41379c48337295217c80db92e3c4d3d3745ee3e7e25cbf4b3c021",
+    "pnl_attribution.csv": "5bad19570f27ecc1b362d053ea700a8d91c6cb50c1598c4c9007155c5d265378",
+    "scenario_assumptions.csv": "12d21324b66e856b29a2d99da3b5ce9150f314abd1cc143b8830b13433b42b47",
+    "scenario_results.csv": "4f04377a848f2f389699122be0e26401c73a8500eb3f621f27725869bfaf59d6",
+    "portfolio_ledger.csv": "f88aff67c3a3ced35a6c473ced9645328fbc9e46978bff964b7cc26afad9dfe5",
+    "portfolio_positions.csv": "94e087d2ccfa549e4d6afd30d2abcd392da31fab458f8a546d56f82adf8a5d61",
+    "portfolio_weights.csv": "638435d69503021708c0ae74bf48858e0b9ee25653fd5ecf13a246da86706454",
+    "portfolio_daily_returns.csv": "8c8172bf1b8848258766838e414c14984c51022b700a869c0040ade54f4b8de8",
+    "portfolio_return_contributions.csv": "9da15cc37c81b1d96dfa8a307c314a5de9a404655502e49fd840cec876ec2242",
+    "portfolio_monthly_returns.csv": "810263502ab6e6ee3652cd46ae9f214d231e29f8216b0f96ace572d8388454d6",
+    "portfolio_drawdowns.csv": "b93faa142a562e2baec1f5b6adfefa6d3bc8b02e5f6b5fce6bb5bf4242f38134",
+    "portfolio_rolling.csv": "ce60e9cd7cde5a727980e63e1b1edefab78625a1ffcc4c01681f0c9568f66679",
+    "buy_hold_ledger.csv": "4ebdca64bd0792c2a66f4ebb90ae85cf95cec4a12ffc9d34c59e0dc6c9b9ed99",
+    "buy_hold_positions.csv": "e31c6ae07140c82a5ab3c196eae22e4932efdc2c779db9f2e9180051d1dd0e0c",
+    "buy_hold_weights.csv": "89b8131a3abe04f0d65d4fe956210f3e3600704919ddc1cccfca82bfbdcaaa16",
+    "buy_hold_daily_returns.csv": "005ffc1950d35482ad706cd1f3eae5d227b21c0df0c1f2212bc129dcb348367a",
+    "buy_hold_return_contributions.csv": "d7ee07fdc616a26f41e3b53846bf3233beb8de9079cc26f91fd7ad2b8246cb5e",
+    "buy_hold_monthly_returns.csv": "940fbc088087719bd8932e2f10b43aff350c1f003a365909eff8de70cd1c42e6",
+    "buy_hold_drawdowns.csv": "09fc523c22bb5f874a18cbb5a2719540b0bf15d01f8849615fbae3558a72fa03",
+    "buy_hold_rolling.csv": "70013afcb13ff327808a5af73b1479efd10ed227eeeb4434a6a1c4997936fda2",
+    "benchmark_ledger.csv": "bcf38be2a905d1ebb72bbf4f9da1c4e46d42038198fc17bd4bdd5e591e829da2",
+    "benchmark_positions.csv": "0a753b453929a07bf719052ab2f3b61c3b7ab46f93258d3e876f8a0cfe9d4958",
+    "benchmark_weights.csv": "eaa701297c6e35036a8844452162e0df79662b617ae7251b0b5a4363998959d5",
+    "benchmark_daily_returns.csv": "109c233a5db3aa58fd14bfa52e3ce9414017ad692003a70474a92ea46e610bd7",
+    "benchmark_return_contributions.csv": "8e32b53d1c4bcd94095378b4ca420912c8dab70f841d1313acdb446c43f9d18e",
+    "benchmark_monthly_returns.csv": "deaa0ebdd5d53d5475ada40169330fc6fdc76e687a187bb946b41b7c700340bf",
+    "benchmark_drawdowns.csv": "84de4030adb9381e1ed8268e262e8b91f4a9c4789571e81e4cc574039a73f993",
+    "benchmark_rolling.csv": "b71be8b6ac914a5dc5816a6a2207cc4dc851bda668ec44f54bb6f90468119995"
+  }
+}
